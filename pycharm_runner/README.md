@@ -1,6 +1,8 @@
 PyCharm Runner: Run and Debug Python Modules in PyCharm
 =======================================================
 
+PyCharm 2016 run & debug configurations support python scripts only, and not python modules (i.e. `python -m mypackage.mymodule`). This little script solves the problem by dynamically importing the desired module.
+
 Instructions
 ------------
 
