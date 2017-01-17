@@ -30,7 +30,7 @@ def run(args, module_args):
 
 
 def main():
-    parser = ArgumentParser()
+    parser = ArgumentParser(add_help=False)
     parser.add_argument('target', help='Fully qualified entry point path, e.g.: package.module:function')
     args, module_args = parser.parse_known_args()
 
@@ -38,8 +38,6 @@ def main():
         return run(args, module_args)
     except PycharmRunnerException as e:
         print(e, file=sys.stderr)
-    except:
-        traceback.print_exc()
 
     return 1
 
